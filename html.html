@@ -1,0 +1,665 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Responsive Navbar</title>
+  <link rel="stylesheet" href="css.css" />
+  <style>
+
+  </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="logo">Binance</a>
+
+    <button class="hamburger" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div class="sections">
+      <a href="#" id="about-link">About</a>
+
+      <div class="custom-dropdown">
+        <button id="category-btn" class="select">Categories ▼</button>
+        <ul id="category-list" class="dropdown-list hidden">
+          <li data-category="junior">Juniors</li>
+          <li data-category="middle">Middles</li>
+          <li data-category="senior">Seniors</li>
+        </ul>
+      </div>
+
+      <a href="#" id="open-modal">Sign In</a>
+      <a href="#" id="open-contact"><button class="btn">Contact</button></a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="npm">
+      <div class="lol">
+        <h2>Why Choose E-Learning</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam pariatur culpa dicta delectus cumque sapiente, alias dolorem placeat dolore laborum dolorum impedit quidem ratione ea dolores? Deserunt excepturi aliquam ea.</p>
+      </div>
+      <div class="boex">
+        <div class="toys">
+          <div class="toy">
+            <h4>Lifetime access</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque cupiditate ducimus quibusdam quia, natus iusto fuga labore similique quidem perspiciatis deserunt aliquam quisquam?</p>
+          </div>
+          <div class="toy">
+            <h4>Course accessibilty</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus officia dolorem eius officiis, molestias optio distinctio necessitatibus. Natus voluptates optio illum praesentium voluptatibus.</p>
+          </div>
+        </div>
+        <div class="boys">
+          <div class="toy">
+            <h4>Expert instructors</h4>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus provident aliquid voluptatum iste numquam dolor pariatur cumque eligendi, veritatis iusto tenetur explicabo! Quaerat.</p>
+          </div>
+          <div class="toy">
+            <h4>Certificate of Competion</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil officia, reprehenderit cumque quisquam voluptatem itaque, officiis iste ut, doloremque ducimus repellendus eaque amet?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section id="about-section" class="about hidden">
+      <h2>About Our Platform</h2>
+      <p>
+        We offer high-quality e-learning courses for students and professionals. Our mission is to make education accessible, effective, and enjoyable for everyone.
+      </p>
+      <ul>
+        <li>📚 Over 500+ curated courses</li>
+        <li>👨‍🏫 Instructors from top universities</li>
+        <li>🎓 Get certified and grow your career</li>
+      </ul>
+    </section>
+
+    <div id="category-info" class="category-info"></div>
+
+    <section id="category-cards-container" class="category-cards-container hidden"></section>
+  </main>
+
+  <div class="modal" id="signin-modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h2>Sign In</h2>
+      <form class="signin-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
+  </div> 
+
+  <div id="contact-modal" class="contact-modal" aria-hidden="true">
+    <div class="contact-modal-content" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+      <button class="close-contact" aria-label="Close contact form">&times;</button>
+      <h2 id="contact-title">Contact Us</h2>
+      <form id="contact-form" action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required autocomplete="off" />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required autocomplete="off" />
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit" class="submit-contact">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <section class="pricing-wrapper">
+    <h2 class="title">Choose Your Plan</h2>
+    <div class="pricing-grid">
+      <div class="plan-card basic"> 
+        <h3>Basic</h3>
+        <p class="price">$0<span>/mo</span></p>
+        <ul>
+          <li>5 Courses Access</li>
+          <li>Basic Support</li>
+          <li>Intro Certificates</li>
+        </ul>
+        <button>Start Free</button>
+      </div>
+
+      <div class="plan-card pro">
+        <h3>Pro</h3>
+        <p class="price">$29<span>/mo</span></p>
+        <ul>
+          <li>Unlimited Courses</li>
+          <li>Priority Support</li>
+          <li>All Certificates</li>
+        </ul>
+        <button class="go">Go Pro</button>
+      </div>
+
+      <div class="plan-card team">
+        <h3>Team</h3>
+        <p class="price">$99<span>/mo</span></p>
+        <ul>
+          <li>10+ Users</li>
+          <li>Dedicated Manager</li>
+          <li>Custom Onboarding</li>
+        </ul>
+        <button>Contact Sales</button>
+      </div>
+    </div>
+  </section>
+   
+  <section class="projects-section">
+  <h2 class="section-title">Our Projects</h2>
+  <div class="projects-grid">
+   
+    <div class="project-card fade-in" style="animation-delay: 0.1s">
+      <img src="https://uicreative.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2019/11/23140644/website-template-design-projects.jpg" alt="Project 1" />
+      <h3>Virtual Classroom</h3>
+      <p>An interactive virtual class system with live quizzes and progress tracking.</p>
+    </div>
+
+  
+    <div class="project-card fade-in" style="animation-delay: 0.2s">
+      <img src="https://repository-images.githubusercontent.com/687070251/3d7bf6dd-d039-4d21-bba7-a0ccc4c99d6a" alt="Project 2" />
+      <h3>Skill Tracker</h3>
+      <p>A gamified dashboard to track skill acquisition across different subjects.</p>
+    </div>
+
+   
+    <div class="project-card fade-in" style="animation-delay: 0.3s">
+      <img src="https://res.cloudinary.com/upwork-cloud/image/upload/c_scale,w_1000/v1708006767/catalog/1508557312875302912/ocbsf3wfqmt53dwrh2wv.webp" alt="Project 3" />
+      <h3>AI Quiz Engine</h3>
+      <p>Dynamically generates personalized quizzes based on learner progress.</p>
+    </div>
+  </div>
+</section>
+
+<section class="teachers-section">
+  <h2 class="section-title">Meet Our Teachers</h2>
+  <div class="teachers-grid">
+    
+    <!-- Teacher 1 -->
+    <div class="teacher-card fade-in" style="animation-delay: 0.1s">
+      <img src="https://www.sciencebuddies.org/7zLYmn_ONTUkBcZrOUKRf7u7RMc=/640x480/-/https/careerdiscovery.sciencebuddies.org/cdn/Files/19713/5/web-developer-designer-main.jpg" alt="Teacher Sarah" />
+      <h3>Sarah Thompson</h3>
+      <p>Expert in Mathematics & Critical Thinking</p>
+    </div>
+
+    <!-- Teacher 2 -->
+    <div class="teacher-card fade-in" style="animation-delay: 0.2s">
+      <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/gzZpBDV3nX1AWytfLhbgs/d528553697d959544c8ca5b80b6d8beb/web_developer.png?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000" alt="Teacher James" />
+      <h3>James Carter</h3>
+      <p>Full Stack Developer & Mentor</p>
+    </div>
+
+    <!-- Teacher 3 -->
+    <div class="teacher-card fade-in" style="animation-delay: 0.3s">
+      <img src="https://cdn.careerfoundry.com/en/wp-content/uploads/2021/06/learning-how-to-become-a-web-developer-could-be-the-best-move-you-can-make.webp" alt="Teacher Amina" />
+      <h3>Amina Rahim</h3>
+      <p>AI & Machine Learning Specialist</p>
+    </div>
+
+    <!-- Teacher 4 -->
+    <div class="teacher-card fade-in" style="animation-delay: 0.4s">
+      <img src="https://www.csinow.edu/wp-content/uploads/2025/02/computersystemsinstitute-355913-man-laptop-coding-blogbanner-1-1.jpg" alt="Teacher Kenji" />
+      <h3>Kenji Nakamura</h3>
+      <p>Design Thinking & UI/UX Coach</p>
+    </div>
+
+  </div>
+</section>
+  
+ 
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-title fade-in">Unlock Your Potential with AI Learning</h1>
+    <p class="hero-subtitle fade-in" style="animation-delay: 0.2s;">
+      Learn faster, smarter, and deeper with real-world projects and top educators.
+    </p>
+    <div class="hero-buttons fade-in" style="animation-delay: 0.4s;">
+      <a href="#courses" class="btn primary">Explore Courses</a>
+      <a href="#pricing" class="btn secondary">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2 class="section-title">What Our Learners Say</h2>
+  <div class="testimonials-grid">
+    
+    
+    <div class="testimonial-card fade-in" style="animation-delay: 0.1s">
+      <p>"This platform changed how I learn. The AI-guided courses are genius!"</p>
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User" />
+        <div>
+          <h4>Maria Gomez</h4>
+          <span>Data Science Student</span>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="testimonial-card fade-in" style="animation-delay: 0.2s">
+      <p>"Projects helped me get hired. It's practical, not just theory."</p>
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="User" />
+        <div>
+          <h4>Omar Rahman</h4>
+          <span>Full Stack Developer</span>
+        </div>
+      </div>
+    </div>
+
+  
+    <div class="testimonial-card fade-in" style="animation-delay: 0.3s">
+      <p>"The mentors are real industry pros. You get direct guidance!"</p>
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/men/52.jpg" alt="User" />
+        <div>
+          <h4>Kenji Watanabe</h4>
+          <span>UX Designer</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+ 
+ <section class="faq-section">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+  <div class="faq-container">
+    
+    <div class="faq-item">
+      <button class="faq-question">How do I enroll in a course?</button>
+      <div class="faq-answer">
+        <p>Just click on “Explore Courses,” select your course, and follow the checkout process.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Are the classes live or pre-recorded?</button>
+      <div class="faq-answer">
+        <p>We offer both! You can attend live sessions and also access recorded lessons anytime.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do I get a certificate?</button>
+      <div class="faq-answer">
+        <p>Yes! Upon successful completion, you'll receive a digital certificate shareable on LinkedIn.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Is there any free trial?</button>
+      <div class="faq-answer">
+        <p>Absolutely. You can try out selected content for free before subscribing.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="blog-section">
+  <h2 class="section-title">Latest Articles</h2>
+  <div class="blog-grid">
+
+    <!-- Blog Card 1 -->
+    <div class="blog-card fade-in" style="animation-delay: 0.1s">
+      <img src="https://www.1training.org/wp-content/uploads/2019/04/How-to-become-a-Web-Developer-2.png" alt="Blog 1" />
+      <div class="blog-content">
+        <h3>5 Ways AI is Changing Online Learning</h3>
+        <p>Discover how artificial intelligence is transforming education and making learning more personalized.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="blog-card fade-in" style="animation-delay: 0.2s">
+      <img src="https://www.interviewbit.com/blog/wp-content/uploads/2021/08/web-developer.jpg" alt="Blog 2" />
+      <div class="blog-content">
+        <h3>Top 10 Projects to Boost Your Portfolio</h3>
+        <p>Stand out to employers with these hands-on coding projects that demonstrate real-world skills.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="blog-card fade-in" style="animation-delay: 0.3s">
+      <img src="https://www.hostitsmart.com/blog/wp-content/uploads/2023/12/Will-AI-Replace-Web-Developers-1200x845.jpg" alt="Blog 3" />
+      <div class="blog-content">
+        <h3>Live vs. Pre-recorded: What's Better?</h3>
+        <p>We break down the pros and cons of each learning style and which suits different students best.</p>
+        <a href="#" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+ 
+ <footer>
+    <div>
+      <h3>Logo</h3>
+      <p>2899 Martha Ellen Drive,<br>New York, USA, 2346004233</p>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-linkedin-in"></i>
+      </div>
+    </div>
+
+    <div>
+      <h3>Useful Links</h3>
+      <a href="#">Payment & Tax</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Your Account</a>
+    </div>
+
+    <div>
+      <h3>Our Company</h3>
+      <a href="#">About Us</a>
+      <a href="#">Media</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="subscribe">
+      <h3>Subscriber News</h3>
+      <input type="email" placeholder="Enter your email" />
+      <button><i class="fas fa-paper-plane"></i> Subscribe</button>
+      <p>info@yoursite.com<br>321 - 484 2344-02</p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const sections = document.querySelector('.sections');
+
+    hamburger.addEventListener('click', () => {
+      sections.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    const openModal = document.getElementById('open-modal');
+    const closeModal = document.getElementById('close-modal');
+    const modal = document.getElementById('signin-modal');
+
+    openModal.addEventListener('click', (e) => {
+      e.preventDefault();
+      modal.classList.add('show');
+    });
+
+    closeModal.addEventListener('click', () => {
+      modal.classList.remove('show');
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('show');
+      }
+    });
+
+    const aboutLink = document.getElementById('about-link');
+    const aboutSection = document.getElementById('about-section');
+
+    aboutLink.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      if (aboutSection.classList.contains('hidden')) {
+        aboutSection.classList.remove('hidden');
+        aboutSection.classList.add('showing');
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+
+        aboutSection.addEventListener('animationend', () => {
+          aboutSection.classList.remove('showing');
+        }, { once: true });
+
+      } else {
+        aboutSection.classList.add('hidden');
+      }
+    });
+
+    const categoryBtn = document.getElementById('category-btn');
+    const categoryList = document.getElementById('category-list');
+    const categoryInfo = document.getElementById('category-info');
+    const cardsContainer = document.getElementById('category-cards-container');
+
+    const categoriesData = {
+      junior: [
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921222.png',
+          developer: 'Junior Dev 1',
+          description: 'Beginner friendly courses on HTML & CSS.',
+          image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921222.png',
+          developer: 'Junior Dev 2',
+          description: 'Learn JavaScript fundamentals and basics.',
+          image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921222.png',
+          developer: 'Junior Dev 3',
+          description: 'Introduction to web development tools.',
+          image: 'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80',
+        }
+      ],
+      middle: [
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921233.png',
+          developer: 'Middle Dev 1',
+          description: 'Intermediate JavaScript & frameworks.',
+          image: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921233.png',
+          developer: 'Middle Dev 2',
+          description: 'Working with APIs and data fetching.',
+          image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921233.png',
+          developer: 'Middle Dev 3',
+          description: 'Version control with Git and GitHub.',
+          image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80',
+        }
+      ],
+      senior: [
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921217.png',
+          developer: 'Senior Dev 1',
+          description: 'Advanced topics in backend development.',
+          image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921217.png',
+          developer: 'Senior Dev 2',
+          description: 'System design and architecture best practices.',
+          image: 'https://images.unsplash.com/photo-1537432376769-00a4ac962af3?auto=format&fit=crop&w=400&q=80',
+        },
+        {
+          logo: 'https://cdn-icons-png.flaticon.com/512/2921/2921217.png',
+          developer: 'Senior Dev 3',
+          description: 'Leadership and team management skills.',
+          image: 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=400&q=80',
+        }
+      ],
+    };
+
+    categoryBtn.addEventListener('click', () => {
+      categoryList.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!categoryBtn.contains(e.target) && !categoryList.contains(e.target)) {
+        categoryList.classList.add('hidden');
+      }
+    });
+
+    function renderCategoryCards(category) {
+      const cards = categoriesData[category];
+      if (!cards) return;
+
+      cardsContainer.innerHTML = '';
+      categoryInfo.classList.remove('show');
+      aboutSection.classList.add('hidden');
+
+      cards.forEach(card => {
+        const cardDiv = document.createElement('div');
+        cardDiv.classList.add('category-card');
+
+        cardDiv.innerHTML = `
+          <img src="${card.logo}" alt="Logo" class="logo" />
+          <div class="developer">${card.developer}</div>
+          <p>${card.description}</p>
+          <img src="${card.image}" alt="Description Image" class="description-image" />
+        `;
+
+        cardsContainer.appendChild(cardDiv);
+      });
+
+      cardsContainer.classList.remove('hidden');
+      setTimeout(() => {
+        cardsContainer.classList.add('show');
+        cardsContainer.scrollIntoView({ behavior: 'smooth' });
+      }, 50);
+    }
+
+    categoryList.querySelectorAll('li').forEach(item => {
+      item.addEventListener('click', (e) => {
+        const selectedCategory = e.target.getAttribute('data-category');
+        categoryBtn.textContent = e.target.textContent + ' ▼';
+        categoryList.classList.add('hidden');
+
+        renderCategoryCards(selectedCategory);
+      });
+    });
+
+    const contactModal = document.getElementById('contact-modal');
+    const openContactBtn = document.getElementById('open-contact');
+    const closeContactBtn = contactModal.querySelector('.close-contact');
+
+    openContactBtn.addEventListener('click', e => {
+      e.preventDefault();
+      contactModal.classList.add('show');
+      contactModal.setAttribute('aria-hidden', 'false');
+    });
+
+    closeContactBtn.addEventListener('click', () => {
+      contactModal.classList.remove('show');
+      contactModal.setAttribute('aria-hidden', 'true');
+    });
+
+    window.addEventListener('click', e => {
+      if (e.target === contactModal) {
+        contactModal.classList.remove('show');
+        contactModal.setAttribute('aria-hidden', 'true');
+      }
+    });
+
+        const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    document.querySelectorAll('.plan-card').forEach(card => {
+      observer.observe(card);
+    });
+
+      // Animate project cards on scroll
+  const projectObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        projectObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.project-card').forEach(card => {
+    projectObserver.observe(card);
+  });
+
+    const teacherObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        teacherObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.teacher-card').forEach(card => {
+    teacherObserver.observe(card);
+  });
+
+   document.querySelectorAll('.fade-in').forEach(el => {
+    const delay = el.style.animationDelay || '0s';
+    el.style.animationDelay = delay;
+  });
+
+    // Animate testimonials on scroll
+  const testimonialObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        testimonialObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.testimonial-card').forEach(card => {
+    testimonialObserver.observe(card);
+  });
+
+   document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      item.classList.toggle("open");
+
+      // Optional: close others
+      document.querySelectorAll(".faq-item").forEach(i => {
+        if (i !== item) i.classList.remove("open");
+      });
+    });
+  });
+
+  document.querySelectorAll('.blog-card').forEach(card => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        card.classList.add('visible');
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    observer.observe(card);
+  });
+  </script>
+</body>
+</html>
